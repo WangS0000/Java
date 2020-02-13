@@ -1,0 +1,9 @@
+集合：
+首先将Demo1.class加载进方法区（内存），之后将主函数main加载进栈中，再之后，将Student.class加载进方法区（内存），
+在栈中的main中，创建Student[]数组arr，然后在堆中创建数组个数，每个层对应着一个地址值，在创建对象时：
+Student[] arr = new Student[5];
+arr[0] = new Student("张三",23);
+通过层内的地址找到对应的String name，和int age
+在之前String name和int age都是null和0
+在通过构造方法输入值后，进行刷新
+
